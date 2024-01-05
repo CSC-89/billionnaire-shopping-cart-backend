@@ -2,7 +2,7 @@ namespace BillionnaireShoppingCart.Api.Models;
 
 public interface IBillionnaire
 {
-    public string Name;
-    public string NetWorth;
-    public string ImagePath;
+    public string Name { get; }
+    public int NetWorth { get; }
+    public string ImagePath { get; }
 }

@@ -1,4 +1,5 @@
 using BillionnaireShoppingCart.Api.Db;
+using BillionnaireShoppingCart.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BillionnaireShoppingCart.Api.Controllers;
@@ -7,15 +8,15 @@ namespace BillionnaireShoppingCart.Api.Controllers;
 [Route("api/[controller]")]
 public class BillionnairesController : ControllerBase
 {
-    private readonly IDatabase _db;
+    private readonly BillionnairesDb _db;
 
-    public BillionnairesController(IDatabase billionnaireDb)
+    public BillionnairesController(BillionnairesDb billionnairesDb)
     {
-        _db = billionnaireDb;
+        _db = billionnairesDb;
     }
     [HttpGet]
-    public void GetBillionnaires()
+    public List<Billionnaire> GetBillionnaires()
     {
-        throw new NotImplementedException();
+        return _db.Data;
     }
 }

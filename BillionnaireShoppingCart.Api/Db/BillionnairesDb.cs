@@ -1,12 +1,16 @@
 using System.Collections.Generic;
+using BillionnaireShoppingCart.Api.Models;
+
 namespace BillionnaireShoppingCart.Api.Db;
 
-public class BillionnairesDb
+public class BillionnairesDb : IDatabase<Billionnaire>
 {
-    public BillionnairesDb(string type)
+    public List<Billionnaire> Data { get; set; } = new()
     {
-        
-        Data = new List<>
-    }
-    public List<T> Data { get; }
+        new () {
+            Name = "Test1",
+            NetWorth = 100000,
+            ImagePath = "http://example.com"
+        }
+    };
 }

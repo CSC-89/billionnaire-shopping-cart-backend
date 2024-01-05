@@ -1,7 +1,13 @@
+using BillionnaireShoppingCart.Api.Db;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var billionnaireDb = new BillionnairesDb();
+var productsDb = new ProductsDb();
 
+builder.Services.AddSingleton(billionnaireDb);
+builder.Services.AddSingleton(productsDb);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

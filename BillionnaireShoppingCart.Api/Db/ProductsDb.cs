@@ -21,6 +21,16 @@ public class ProductsDb : IDatabase<Product>
             Price = 700600000,
             ImagePath = "https://www.mff.se/app/uploads/2019/03/190328_klubbskold-puff.jpg"
         },
+        new () {
+            Name = "Apache Helicopter",
+            Price = 52000000,
+            ImagePath = "https://static.theprint.in/wp-content/uploads/2017/08/Apache-helicopters-Wikimedia-Commons-e1582873278562.jpg"
+        },
+        new () {
+            Name = "Beyonce Tickets",
+            Price = 1796,
+            ImagePath = "https://bdc2020.o0bc.com/wp-content/uploads/2023/08/CW26HEGWZZCYNBNL5CT4KEHAWY-64ca442a59675-768x432.jpeg"
+        },
         
     };
 }

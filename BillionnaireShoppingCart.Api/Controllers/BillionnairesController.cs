@@ -15,7 +15,7 @@ public class BillionnairesController : ControllerBase
         _db = billionnairesDb;
     }
     [HttpGet]
-    public List<Billionnaire> GetBillionnaires()
+    public List<Billionnaire> GetAllBillionnaires()
     {
         return _db.Data;
     }
